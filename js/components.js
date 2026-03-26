@@ -22,8 +22,9 @@
   <div class="nav-tabs" id="nav-tabs">
     <a href="${root}index.html"${activeHome()}>Inici</a>
     <a href="${root}centre/"${active('/centre/')}>Centre</a>
-    <a href="${root}cursos/"${active('/cursos/')}>Cursos</a>
+    <a href="${root}formacio/"${path.includes('/formacio/') && !path.includes('/dept_info/') ? ' class="active"' : ''}>Formaci\u00f3</a>
     <a href="${root}apps/"${active('/apps/')}>Apps</a>
+    <a href="${root}formacio/dept_info/"${active('/dept_info/')}>Dept. Inform\u00e0tica</a>
     <a href="${root}joc/"${active('/joc/')}>Guanya un dau</a>
   </div>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Men\u00fa" aria-expanded="false">
@@ -37,6 +38,12 @@
   <img src="${root}media/logo.png" alt="IES Sineu" />
   <span>P\u00e0gina feta per l'IES Sineu</span>
 </footer>`;
+
+  /* ── FAVICON ── */
+  const favicon = document.createElement('link');
+  favicon.rel = 'icon';
+  favicon.href = root + 'media/logo.png';
+  document.head.appendChild(favicon);
 
   const navEl = document.getElementById('site-nav');
   if (navEl) navEl.outerHTML = navHTML;
