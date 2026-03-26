@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La paraula del dia — IES Sineu</title>
+  <link rel="stylesheet" href="/style/nav.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="script.js"></script>
+</head>
+
+<body data-root="../../../../">
+
+  <div id="site-nav"></div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- APP HEADER -->
+    <div class="app-header">
+      <div class="app-icon" style="background: #ffffff; border: 1px solid #e8eaed;">
+        <!-- Logo -->
+        <img src="media/logo.png" alt="Paraula del dia" style="width: 100%; height: 100%; object-fit: contain;" />
+      </div>
+      <div class="app-info">
+        <h1>La paraula del dia</h1>
+        <div class="developer">Marc Mas Hernández</div>
+      </div>
+    </div>
+
+
+    <!-- INSTALL BUTTON -->
+    <button class="btn-install">
+      <a href="app.zip" class="a-install">
+        Descarregar
+      </a>
+    </button>
+
+
+    <!-- INFO PILLS -->
+    <div class="info-pills">
+      <div class="pill">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+        </svg>
+        Aquest joc només es compatible per ordinadors
+      </div>
+    </div>
+
+    <!-- SCREENSHOTS -->
+    <div class="screenshots-section">
+      <div class="screenshots-wrapper">
+        <!-- Demo GIF (apareix primer, com un vídeo de previsualització) -->
+        <div class="screenshot screenshot-demo">
+          <img src="/IES-Sineu-Pagina-Fira-Inca/apps/1r_GSDAM/Marc/Wordle/media/Marc.gif.gif" alt="Demo Wordle" />
+        </div>
+        <div class="screenshot">
+          <img src="media/jugant.png" alt="Imatge del joc" />
+        </div>
+        <div class="screenshot">
+          <img src="media/registre.png" alt="Imatge del registre" />
+        </div>
+        <div class="screenshot">
+          <img src="media/puntuacio.png" alt="Imatge de les puntuacions" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section-header">
+      <h2>Sobre aquesta app</h2>
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+        </svg>
+      </a>
+    </div>
+
+    <p class="about-text">
+      <strong>La paraula del dia</strong> és un joc que es tracta d'endevinar paraules relacionades amb l'informàtica
+    </p>
+    <p class="about-text">
+      Amb la paraula del dia podràs:
+    </p>
+    <ul class="about-text">
+      <li>
+        Aprendre nou vocabulari relacionat amb programació i bases de dades
+      </li>
+      <li>
+        Divertir-te amb paraules noves cada dia
+      </li>
+      <li>
+        Competeix amb els teus amics per veure qui pot endivinar la mateixa paraula en menys temps
+      </li>
+    </ul>
+
+    <!-- APP INFO -->
+    <div class="app-info-section">
+      <div class="section-header">
+        <h2>Informació de l'app</h2>
+      </div>
+      <div class="info-table">
+        <div class="info-row"><span class="key">Desenvolupador</span><span class="val">Marc Mas Hernández</span></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" id="lightboxImg" alt="" />
+  </div>
+
+  <script>
+
+  </script>
+  <script src="../../../../js/components.js"></script>
+</body>
+
+</html>
