@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+header {
+    background: #c40000;
+    color: white;
+    padding: 10px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+}
+
+.menu-btn {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* MENÚ */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: black;
+    color: white;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #c40000;
+}
+
+main {
+    padding: 15px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}

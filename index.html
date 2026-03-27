@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -124,14 +125,86 @@
           <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </a>
       </div>
-      <div class="cycle-summary">
-        <div class="cycle-summary__info">
+      <div class="joc-split">
+        <div class="joc-split__info">
           <p class="cycle-summary__desc">
             Identifica animals autòctons de les Illes Balears, encerta el seu nom i suma punts. Arriba a la puntuació objectiu, ensenya la pantalla a l'estand i guanya un premi!
           </p>
+          <ul class="joc-features">
+            <li>
+              <span class="material-symbols-rounded">photo_camera</span>
+              Imatge d'un animal cada ronda
+            </li>
+            <li>
+              <span class="material-symbols-rounded">checklist</span>
+              Tria entre diverses opcions
+            </li>
+            <li>
+              <span class="material-symbols-rounded">card_giftcard</span>
+              Arriba a la puntuació i guanya un premi
+            </li>
+          </ul>
+          <div class="joc-split__ctas">
+            <a class="cycle-summary__cta" href="http://www.gimnesia.net/dev/gimnesia/joc.html" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-rounded">play_arrow</span>
+              Jugar ara
+            </a>
+            <a class="cycle-summary__cta cycle-summary__cta--secondary" href="joc/">
+              <span class="material-symbols-rounded">menu_book</span>
+              Veure instruccions
+            </a>
+          </div>
         </div>
-        <a class="cycle-summary__cta" href="joc/">
-          Jugar ara
+        <div class="joc-mini-preview" aria-hidden="true">
+          <div class="joc-mini-preview__bar">
+            <span class="joc-mini-preview__title">Els Noms de Gimnèsia</span>
+            <span class="joc-mini-preview__score">
+              <span class="material-symbols-rounded">emoji_events</span>12 pts
+            </span>
+          </div>
+          <div class="joc-mini-preview__animal">🦅</div>
+          <div class="joc-mini-preview__options">
+            <div class="joc-mini-opt">Serp de garriga</div>
+            <div class="joc-mini-opt">Tortuga boba</div>
+            <div class="joc-mini-opt joc-mini-opt--correct">
+              <span class="material-symbols-rounded">check</span>Àguila peixatera
+            </div>
+            <div class="joc-mini-opt">Marieta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educació Secundària -->
+    <div class="section">
+      <div class="section-header-row">
+        <a class="section-btn" href="formacio/secundaria/secundaria.html">
+          Educació Secundària
+          <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </a>
+      </div>
+      <div class="cycle-summary">
+        <div class="cycle-summary__info">
+          <p class="cycle-summary__desc">
+            Assignatures d'informàtica per a l'ESO i el Batxillerat: des dels entorns digitals de 1r ESO fins a programació i tractament de dades a 2n de Batxillerat.
+          </p>
+          <div class="cycle-summary__stats">
+            <div class="cycle-stat">
+              <span class="cycle-stat__value">6</span>
+              <span class="cycle-stat__label">Nivells</span>
+            </div>
+            <div class="cycle-stat">
+              <span class="cycle-stat__value">ESO</span>
+              <span class="cycle-stat__label">1r–4t</span>
+            </div>
+            <div class="cycle-stat">
+              <span class="cycle-stat__value">Batx.</span>
+              <span class="cycle-stat__label">1r–2n</span>
+            </div>
+          </div>
+        </div>
+        <a class="cycle-summary__cta" href="formacio/secundaria/secundaria.html">
+          Veure assignatures
           <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </a>
       </div>
@@ -140,7 +213,7 @@
     <!-- Grau Mitjà SMX -->
     <div class="section">
       <div class="section-header-row">
-        <a class="section-btn" href="grau_mitja/">
+        <a class="section-btn" href="formacio/grau_mitja/">
           Grau Mitjà — SMX
           <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </a>
@@ -169,7 +242,7 @@
             </div>
           </div>
         </div>
-        <a class="cycle-summary__cta" href="grau_mitja/">
+        <a class="cycle-summary__cta" href="formacio/grau_mitja/">
           Veure tots els mòduls
           <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </a>
@@ -179,7 +252,7 @@
     <!-- Grau Superior DAM -->
     <div class="section">
       <div class="section-header-row">
-        <a class="section-btn" href="grau_superior/">
+        <a class="section-btn" href="formacio/grau_superior/">
           Grau Superior — DAM
           <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </a>
@@ -208,8 +281,43 @@
             </div>
           </div>
         </div>
-        <a class="cycle-summary__cta" href="grau_superior/">
+        <a class="cycle-summary__cta" href="formacio/grau_superior/">
           Veure tots els mòduls
+          <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Certificat de Professionalitat -->
+    <div class="section">
+      <div class="section-header-row">
+        <a class="section-btn" href="formacio/cert_profess/">
+          Certificat de Professionalitat
+          <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </a>
+      </div>
+      <div class="cycle-summary">
+        <div class="cycle-summary__info">
+          <p class="cycle-summary__desc">
+            Formació de nivell 1 en muntatge i manteniment de sistemes microinformàtics. Orientada a la inserció laboral en suport tècnic i atenció a usuaris.
+          </p>
+          <div class="cycle-summary__stats">
+            <div class="cycle-stat">
+              <span class="cycle-stat__value">370h</span>
+              <span class="cycle-stat__label">Durada</span>
+            </div>
+            <div class="cycle-stat">
+              <span class="cycle-stat__value">IFCT0108</span>
+              <span class="cycle-stat__label">Codi</span>
+            </div>
+            <div class="cycle-stat">
+              <span class="cycle-stat__value">1</span>
+              <span class="cycle-stat__label">Nivell</span>
+            </div>
+          </div>
+        </div>
+        <a class="cycle-summary__cta" href="formacio/cert_profess/">
+          Veure detalls
           <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
         </a>
       </div>
