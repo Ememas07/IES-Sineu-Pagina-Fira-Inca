@@ -1,0 +1,44 @@
+<comanda xmls:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Tema5_Fruites.xsd" codi_comanda="N11524">
+<!-- Dades de la botiga que fa la comanda -->
+ <botiga>
+    <nom>Frutas SL - Botiga Barcelona Centre</nom>
+    <!-- Adreça on s'envia la mercaderia (zona de venda) -->
+     <adreca_mercaderia>
+        <carrer>Carrer de Pelai, 12</carrer>
+        <codi_postal>08001</codi_postal>
+        <poblacio>Barcelona</poblacio>
+        <provincia>Barcelona</provincia>
+     </adreca_mercaderia>
+     <!-- Adreça on s'envia l'albarà (zona de gestió) -->
+      <adreca_albara>
+        <carrer>Avinguada Diagonal, 45</carrer>
+        <codi_postal>08006</codi_postal>
+        <poblacio>Barcelona</poblacio>
+        <provincia>Barcelona</provincia>
+      </adreca_albara>
+ </botiga>
+ <!-- Empleat que realitza la comanda -->
+  <empleat>Joan Pérez García</empleat>
+  <!-- Data de la comanda -->
+   <data>2024-06-17</data>
+   <!-- Observacions (opcional): urgent | incomplet -->
+    <observacions>urgent</observacions>
+    <!-- Llista d'articles de la comanda -->
+     <articles>
+        <article codi_article="NAV001">
+            <quilos>150.00</quilos>
+            <preu_quilo>0.85</preu_quilo>
+            <observacions>Taronges de primera qualitat</observacions>
+        </article>
+        <article codi_article="LIM002">
+            <quilos>80.50</quilos>
+            <preu_quilo>1.20</preu_quilo>
+        </article>
+        <article codi_article="MAN003">
+            <quilos>200.00</quilos>
+            <preu_quilo>0.95</preu_quilo>
+            <observacions>Mandarines sense llavors</observacions>
+        </article>
+     </articles>
+</comanda>

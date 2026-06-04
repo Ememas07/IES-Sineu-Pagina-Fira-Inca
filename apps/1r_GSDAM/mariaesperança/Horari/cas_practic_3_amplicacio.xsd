@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ============================================================
+       VERSIÓ 2 (AMPLIACIÓ): Fitxes amb nom i codi
+       El codi admet lletres (majúscules i minúscules) i dígits,
+       amb un total de caràcters entre 5 i 10.
+  ============================================================ -->
+
+  <!-- Element arrel: fichas -->
+  <xs:element name="fichas">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Pot haver-hi una o més fitxes -->
+        <xs:element name="ficha" type="tipusFicha" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipus ficha: conté nom i codi, i l'atribut numero -->
+  <xs:complexType name="tipusFicha">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="codigo" type="tipusCodigo"/>
+    </xs:sequence>
+    <!-- Atribut numero: obligatori -->
+    <xs:attribute name="numero" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+
+  <!-- ============================================================
+       TIPUS CODI: lletres (A-Z, a-z) i dígits (0-9)
+       Longitud mínima 5, màxima 10 caràcters
+  ============================================================ -->
+  <xs:simpleType name="tipusCodigo">
+    <xs:restriction base="xs:string">
+      <!-- Patró: només lletres majúscules, minúscules i dígits -->
+      <xs:pattern value="[A-Za-z0-9]+"/>
+      <!-- Longitud mínima: 5 caràcters -->
+      <xs:minLength value="5"/>
+      <!-- Longitud màxima: 10 caràcters -->
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

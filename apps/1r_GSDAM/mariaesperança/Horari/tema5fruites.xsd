@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ============================================================
+       ELEMENT ARREL: comanda
+       L'atribut codi_comanda: 1 lletra majúscula + 5 caràcters
+  ============================================================ -->
+  <xs:element name="comanda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="botiga"       type="tipusBotiga"/>
+        <xs:element name="empleat"      type="xs:string"/>
+        <xs:element name="data"         type="xs:date"/>
+        <xs:element name="observacions" type="tipusObsComanda" minOccurs="0"/>
+        <xs:element name="articles"     type="tipusArticles"/>
+      </xs:sequence>
+      <!-- Codi comanda: 1 lletra majúscula + 5 caràcters qualssevol -->
+      <xs:attribute name="codi_comanda" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][A-Za-z0-9]{5}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ============================================================
+       TIPUS: botiga
+       Conté les dades de la botiga i dues adreces d'enviament
+  ============================================================ -->
+  <xs:complexType name="tipusBotiga">
+    <xs:sequence>
+      <xs:element name="nom"              type="xs:string"/>
+      <xs:element name="adreca_mercaderia" type="tipusAdreca"/>
+      <xs:element name="adreca_albara"     type="tipusAdreca"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       TIPUS: adreça postal (reutilitzable)
+  ============================================================ -->
+  <xs:complexType name="tipusAdreca">
+    <xs:sequence>
+      <xs:element name="carrer"     type="xs:string"/>
+      <xs:element name="codi_postal" type="xs:string"/>
+      <xs:element name="poblacio"   type="xs:string"/>
+      <xs:element name="provincia"  type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       TIPUS: observacions de la comanda
+       Valors possibles: urgent | incomplet
+  ============================================================ -->
+  <xs:simpleType name="tipusObsComanda">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="urgent"/>
+      <xs:enumeration value="incomplet"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ============================================================
+       TIPUS: llista d'articles (mínim 1 article)
+  ============================================================ -->
+  <xs:complexType name="tipusArticles">
+    <xs:sequence>
+      <xs:element name="article" type="tipusArticle" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ============================================================
+       TIPUS: article
+       codi_article: 3 lletres majúscules + 3 dígits
+  ============================================================ -->
+  <xs:complexType name="tipusArticle">
+    <xs:sequence>
+      <xs:element name="quilos"         type="xs:decimal"/>
+      <xs:element name="preu_quilo"     type="xs:decimal"/>
+      <xs:element name="observacions"   type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <!-- Codi article: 3 majúscules + 3 dígits  ex: TAR001 -->
+    <xs:attribute name="codi_article" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Z]{3}[0-9]{3}"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+</xs:schema>

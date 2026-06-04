@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ============================================================
+       VERSIÓ 1: Fitxes de persones amb nom i edat
+  ============================================================ -->
+
+  <!-- Element arrel: fichas -->
+  <xs:element name="fichas">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Pot haver-hi una o més fitxes -->
+        <xs:element name="ficha" type="tipusFicha" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipus ficha: conté nom i edat, i l'atribut numero -->
+  <xs:complexType name="tipusFicha">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="edad"   type="xs:positiveInteger"/>
+    </xs:sequence>
+    <!-- Atribut numero: obligatori -->
+    <xs:attribute name="numero" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,10 @@
+<fichas xmlns:xsi="http://localhost/Tema5/cas_practic_3_amplicacio.xsd">
+<ficha numero="1">
+    <nombre>Nombre1 Apellido1</nombre>
+    <codigo>Ab3Cd</codigo>
+</ficha>
+<ficha numero="2">
+    <nombre>Nombre2 Apellido2</nombre>
+    <codigo>XyZ789mn</codigo>
+</ficha>
+</fichas>

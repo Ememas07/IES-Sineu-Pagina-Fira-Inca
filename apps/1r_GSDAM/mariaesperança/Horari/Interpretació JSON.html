@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interpretació d'un objecte JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    .codi {
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+    .codi .clau    { color: #9cdcfe; }
+    .codi .valor   { color: #ce9178; }
+    .codi .numero  { color: #b5cea8; }
+    .codi .funcio  { color: #dcdcaa; }
+    .codi .keyword { color: #569cd6; }
+    .info {
+      background-color: #eaf4fb;
+      border-left: 4px solid #3498db;
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .resultat {
+      margin-top: 20px;
+      padding: 14px 18px;
+      background-color: #eafaf1;
+      border-left: 4px solid #2ecc71;
+      border-radius: 4px;
+      font-size: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Interpretació d'un objecte JavaScript</h1>
+
+  <p>El següent codi defineix un objecte <code>persona</code> amb dues propietats i un mètode:</p>
+
+  <div class="codi">
+    <span class="keyword">var</span> persona = {<br>
+    &nbsp;&nbsp;<span class="clau">"name"</span>: <span class="valor">"María"</span>,<br>
+    &nbsp;&nbsp;<span class="clau">"edad"</span>: <span class="numero">23</span>,<br>
+    &nbsp;&nbsp;<span class="clau">"avisar"</span>: <span class="keyword">function</span>() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="funcio">alert</span>(<span class="valor">"Hola soy "</span> + <span class="keyword">this</span>.name + <span class="valor">" y mi edad es "</span> + <span class="keyword">this</span>.edad);<br>
+    &nbsp;&nbsp;}<br>
+    };<br><br>
+    persona.<span class="funcio">avisar</span>();
+  </div>
+
+  <div class="info">
+    <strong>Propietats de l'objecte:</strong><br>
+    • <code>name</code>: <strong>María</strong><br>
+    • <code>edad</code>: <strong>23</strong><br>
+    • <code>avisar</code>: funció que mostra una alerta amb les dades
+  </div>
+
+  <p>Fes clic al botó per executar el mètode <code>persona.avisar()</code>:</p>
+
+  <button onclick="executar()">Executar persona.avisar()</button>
+
+  <div class="resultat" id="resultat">
+     Mètode executat correctament. S'ha mostrat l'alerta!
+  </div>
+
+  <script>
+    var persona = {
+      "name": "María",
+      "edad": 23,
+      "avisar": function() {
+        alert("Hola soy " + this.name + " y mi edad es " + this.edad);
+      }
+    };
+
+    function executar() {
+      persona.avisar();
+      var res = document.getElementById("resultat");
+      res.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

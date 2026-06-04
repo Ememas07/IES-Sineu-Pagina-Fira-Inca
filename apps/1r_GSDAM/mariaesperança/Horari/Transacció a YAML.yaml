@@ -1,0 +1,24 @@
+# Dades bàsiques per configurar l'accés a una BBDD
+
+servidor: localhost
+puerto: 3306
+usuario: username
+clave: password
+baseDeDatos: agenda
+tabla: eventos
+
+# Dades que seran gravades en una taula de la BBDD
+
+matrizDeEventos:
+  evento_0:
+    evento: Examen
+    fecha: "17/06/2021"
+    hora: "18:00"
+    lugar: Aula 08
+    asistencia: true
+  evento_1:
+    evento: Recuperación
+    fecha: "17/06/2021"
+    hora: "12:00"
+    lugar: Aula 08
+    asistencia: true
