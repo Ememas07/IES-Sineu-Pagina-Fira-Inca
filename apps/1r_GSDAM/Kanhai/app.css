@@ -1,0 +1,23 @@
+/* Restaura el nav perquè coincideixi amb la resta del lloc */
+.nav {
+  padding: 0 24px;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 0;
+}
+
+.nav-tabs {
+  height: 100%;
+  gap: 0;
+  margin-left: 0;
+}
+
+.nav-tabs a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+}
